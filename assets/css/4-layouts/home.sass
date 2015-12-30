@@ -1,0 +1,48 @@
+.article-cards
+  display: block
+  margin: 20px 0
+  clear: right
+  .category
+    text-transform: uppercase
+    color: $grey-color
+    font-size: 12px
+  .description
+    color: $grey-color
+  .thumbnails
+    width: 100%
+.hover-thumbnail
+  display: block
+  background:
+    size: cover
+    position: center
+  width: 25%
+  float: left
+  position: relative
+  overflow: hidden
+
+  &:after
+    content: ''
+    display: block
+    // match the width of the parent with this inner element
+    padding-top: 100%
+
+  .article-meta
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: fade-out(#3d96cb, 0.3)
+    color: white
+    padding: 10px
+    transform: translate(0%, 100%) scale(0.5)
+    transition: all 200ms ease-in-out
+
+    .name
+      font-size: 18px
+    .description
+      font-size: italic
+
+.hover-thumbnail:hover .article-meta
+  opacity: 1
+  transform: translate(0%, 0%) scale(1)

@@ -1,3 +1,9 @@
 @import "0-tools/bourbon/bourbon";
 @import "0-tools/normalize";
+@import "0-tools/clearfix";
+@import "0-tools/fonts";
 @import "1-base/base.sass";
+@import "2-modules/header.sass";
+@import "2-modules/sidebar.sass";
+@import "2-modules/footer.sass";
+@import "4-layouts/home.sass";

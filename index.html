@@ -1,13 +1,60 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: Home
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+  <div class="col-xs-12 col-sm-8 col-md-9 home-wrap">
+    <h3>Recent Articles</h3>
+    {% for post in site.posts limit:4 %}
+      <div class="col-xs-6 col-sm-4 col-md-3 article-cards">
+        <img src='{{ post.thumbnail }}' class="thumbnails">
+        <span class="category">{{ post.categories }} </span>
+        <h5> {{ post.title }}</h5>
+        <span class="description">{{ post.description }}</span>
+      </div>
     {% endfor %}
-  </ul>
-</div>
+
+    <hr>
+    <!-- REVIEWS -->
+    <div class="col-sm-3">
+      <h4>Reviews</h4>
+      <ul>
+      {% for post in site.posts %}
+        {% if post.categories contains 'reviews' %}
+          <li>{{ post.title }}</li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+    </div>
+    {% for post in site.posts %}
+      {% if post.categories contains 'reviews' %}
+        <div class="col-sm-3 article-cards">
+          <img src='{{ post.thumbnail }}' class="thumbnails">
+          <span class="category">{{ post.categories }} </span>
+          <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+          <span class="description">{{ post.description }}</span>
+        </div>
+      {% endif %}
+    {% endfor %}
+
+    <hr>
+    <!-- RECIPES -->
+    <div class="col-sm-3">
+      <h4>Recipes</h4>
+      <ul>
+      {% for post in site.posts limit: 3 %}
+          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+      </ul>
+    </div>
+    {% for post in site.posts limit: 3  %}
+      {% if post.categories contains 'recipes' %}
+        <div class="col-sm-3 article-cards">
+          <img src='{{ post.thumbnail }}' class="thumbnails">
+          <span class="category">{{ post.categories }} </span>
+          <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+          <span class="description">{{ post.description }}</span>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>

@@ -4,6 +4,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,300);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -353,6 +354,266 @@ td,
 th {
   padding: 0; }
 
+/*  Bootstrap Clearfix */
+/*  Tablet  */
+@media (min-width: 767px) {
+  /* Column clear fix */
+  .col-lg-1:nth-child(12n+1),
+  .col-lg-2:nth-child(6n+1),
+  .col-lg-3:nth-child(4n+1),
+  .col-lg-4:nth-child(3n+1),
+  .col-lg-6:nth-child(2n+1),
+  .col-md-1:nth-child(12n+1),
+  .col-md-2:nth-child(6n+1),
+  .col-md-3:nth-child(4n+1),
+  .col-md-4:nth-child(3n+1),
+  .col-md-6:nth-child(2n+1) {
+    clear: none; }
+  .col-sm-1:nth-child(12n+1),
+  .col-sm-2:nth-child(6n+1),
+  .col-sm-3:nth-child(4n+1),
+  .col-sm-4:nth-child(3n+1),
+  .col-sm-6:nth-child(2n+1) {
+    clear: left; } }
+
+/*  Medium Desktop  */
+@media (min-width: 992px) {
+  /* Column clear fix */
+  .col-lg-1:nth-child(12n+1),
+  .col-lg-2:nth-child(6n+1),
+  .col-lg-3:nth-child(4n+1),
+  .col-lg-4:nth-child(3n+1),
+  .col-lg-6:nth-child(2n+1),
+  .col-sm-1:nth-child(12n+1),
+  .col-sm-2:nth-child(6n+1),
+  .col-sm-3:nth-child(4n+1),
+  .col-sm-4:nth-child(3n+1),
+  .col-sm-6:nth-child(2n+1) {
+    clear: none; }
+  .col-md-1:nth-child(12n+1),
+  .col-md-2:nth-child(6n+1),
+  .col-md-3:nth-child(4n+1),
+  .col-md-4:nth-child(3n+1),
+  .col-md-6:nth-child(2n+1) {
+    clear: left; } }
+
+/*  Large Desktop  */
+@media (min-width: 1200px) {
+  /* Column clear fix */
+  .col-md-1:nth-child(12n+1),
+  .col-md-2:nth-child(6n+1),
+  .col-md-3:nth-child(4n+1),
+  .col-md-4:nth-child(3n+1),
+  .col-md-6:nth-child(2n+1),
+  .col-sm-1:nth-child(12n+1),
+  .col-sm-2:nth-child(6n+1),
+  .col-sm-3:nth-child(4n+1),
+  .col-sm-4:nth-child(3n+1),
+  .col-sm-6:nth-child(2n+1) {
+    clear: none; }
+  .col-lg-1:nth-child(12n+1),
+  .col-lg-2:nth-child(6n+1),
+  .col-lg-3:nth-child(4n+1),
+  .col-lg-4:nth-child(3n+1),
+  .col-lg-6:nth-child(2n+1) {
+    clear: left; } }
+
+.gigantic, .huge, .large, .bigger, .big,
+h1, h2, h3, h4, h5, h6 {
+  color: #000;
+  font-weight: bold; }
+
+.gigantic {
+  font-size: 110px;
+  line-height: 1.09;
+  letter-spacing: -2px; }
+
+.huge, h1 {
+  font-size: 68px;
+  line-height: 1.05;
+  letter-spacing: -1px; }
+
+.large, h2 {
+  font-size: 42px;
+  line-height: 1.14; }
+
+.bigger, h3 {
+  font-size: 26px;
+  line-height: 1.38; }
+
+.big, h4 {
+  font-size: 22px;
+  line-height: 1.38; }
+
+.small, small {
+  font-size: 10px;
+  line-height: 1.2; }
+
+p {
+  margin: 0 0 20px 0; }
+
+em {
+  font-style: italic; }
+
+strong {
+  font-weight: bold; }
+
+hr {
+  border: solid #ddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 10px 0 30px;
+  height: 0; }
+
+a {
+  color: #000;
+  text-decoration: none;
+  outline: 0; }
+
+a:hover, a:focus {
+  color: #333333; }
+
+::-moz-selection {
+  background: #FFF498; }
+
+::selection {
+  background: #FFF498; }
+
+::-moz-selection {
+  background: #FFF498; }
+
+img::-moz-selection {
+  background: transparent; }
+
+img::selection {
+  background: transparent; }
+
+img::-moz-selection {
+  background: transparent; }
+
 body {
-  background: red;
-  color: white; }
+  -webkit-tap-highlight-color: #FFF498; }
+
+html,
+body {
+  min-height: 100vh; }
+
+body {
+  background: white;
+  font-size: 14px;
+  line-height: 1.6;
+  font-family: 'Open Sans' sans-serif;
+  color: #2E2D33;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%; }
+
+.container {
+  padding: 0; }
+
+@media (max-width: 786px) {
+  #large-header {
+    display: none; } }
+
+#small-header {
+  padding: 0;
+  margin: 0;
+  height: 55px; }
+  @media (min-width: 786px) {
+    #small-header {
+      margin-bottom: 20px; } }
+  #small-header .row {
+    padding: 0;
+    margin: 0;
+    height: 100%; }
+    #small-header .row nav {
+      border: none;
+      background: none; }
+      @media (min-width: 786px) {
+        #small-header .row nav .navbar-header {
+          display: none; }
+        #small-header .row nav .collapse {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          text-align: center; }
+          #small-header .row nav .collapse ul {
+            width: 75%;
+            margin: 0 12.5%;
+            float: center;
+            font-size: 18px;
+            font-weight: 500; }
+            #small-header .row nav .collapse ul li {
+              text-align: center;
+              width: 16.66%; }
+              #small-header .row nav .collapse ul li a {
+                color: black; } }
+
+.sidebar {
+  border-left: solid 1px red;
+  margin: 0;
+  padding-top: 0;
+  top: 0;
+  height: 100vh; }
+  .sidebar img {
+    width: 50px;
+    margin: 0 5px;
+    display: inline; }
+
+footer {
+  border-top: 1px solid grey;
+  padding: 20px 0; }
+  footer .social-bar img {
+    width: 50px;
+    margin: 5px 0 5px 0;
+    display: block;
+    float: right;
+    clear: both; }
+  footer .bottom-about {
+    border-left: solid 4px lightblue; }
+
+.article-cards {
+  display: block;
+  margin: 20px 0;
+  clear: right; }
+  .article-cards .category {
+    text-transform: uppercase;
+    color: #757575;
+    font-size: 12px; }
+  .article-cards .description {
+    color: #757575; }
+  .article-cards .thumbnails {
+    width: 100%; }
+
+.hover-thumbnail {
+  display: block;
+  background-size: cover;
+  background-position: center;
+  width: 25%;
+  float: left;
+  position: relative;
+  overflow: hidden; }
+  .hover-thumbnail:after {
+    content: '';
+    display: block;
+    padding-top: 100%; }
+  .hover-thumbnail .article-meta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(61, 150, 203, 0.7);
+    color: white;
+    padding: 10px;
+    -webkit-transform: translate(0%, 100%) scale(0.5);
+            transform: translate(0%, 100%) scale(0.5);
+    transition: all 200ms ease-in-out; }
+    .hover-thumbnail .article-meta .name {
+      font-size: 18px; }
+    .hover-thumbnail .article-meta .description {
+      font-size: italic; }
+
+.hover-thumbnail:hover .article-meta {
+  opacity: 1;
+  -webkit-transform: translate(0%, 0%) scale(1);
+          transform: translate(0%, 0%) scale(1); }

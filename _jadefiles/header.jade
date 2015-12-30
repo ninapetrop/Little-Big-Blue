@@ -1,0 +1,29 @@
+.row#large-header
+  h1 Logo
+.row#small-header
+  .row
+    nav.navbar.navbar-default
+      .container-fluid
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='{{ site.baseurl }}') {{ site.title }}
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li: a(href='/index.html') Home
+            li.dropdown: a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') Categories
+              span.caret
+              ul.dropdown-menu
+                li: a(href='#') Recipes
+                li: a(href='#') Advice
+                li: a(href='#') Training
+                li: a(href='#') Reviews
+            li: a(href='#') Archives
+            li: a(href='about.html') About
+            li: a(href='#') Contact
+            li: a(href='#') Shop
