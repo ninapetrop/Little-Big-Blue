@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Puma FASS 500v3"
-date:   2014-04-20 09:11:03
+title:  "Running in the Rain"
+date:   2014-09-20 09:11:03
 categories: reviews
 description: Phasellus hendrerit. Pellent aliquet nibh nec urna. In nis aliquet vel, dapibus id,mattis.
-thumbnail: /assets/img/thumbnails/review-3.jpg
+thumbnail: /assets/img/thumbnails/rain.jpg
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!

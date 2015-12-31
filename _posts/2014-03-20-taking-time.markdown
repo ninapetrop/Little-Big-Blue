@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Taking Time: The Most Overlooked Importance"
-date:   2014-04-20 09:11:03
+date:   2014-03-20 09:11:03
 categories: advice
 description: Phasellus hendrerit. Pellent aliquet nibh nec urna. In nis aliquet vel, dapibus id,mattis.
 thumbnail: /assets/img/thumbnails/advice-1.jpg

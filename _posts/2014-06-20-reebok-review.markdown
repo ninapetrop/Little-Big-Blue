@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Reebok Something Review"
-date:   2014-04-20 09:11:03
+date:   2014-06-20 09:11:03
 categories: reviews
 description: Phasellus hendrerit. Pellent aliquet nibh nec urna. In nis aliquet vel, dapibus id,mattis.
-thumbnail: /assets/img/thumbnails/review-2.png
+thumbnail: /assets/img/thumbnails/paint.jpg
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!

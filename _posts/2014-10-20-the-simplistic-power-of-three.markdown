@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Simplistic Power of Three"
-date:   2014-04-20 09:11:03
+date:   2014-10-20 09:11:03
 categories: recipes
 description: Phasellus hendrerit. Pellent aliquet nibh nec urna. In nis aliquet vel, dapibus id,mattis.
 thumbnail: /assets/img/thumbnails/food.jpg
