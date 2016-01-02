@@ -1,10 +1,18 @@
 ---
-layout: pages
+layout: default
 ---
 
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
 
-<div class="col-xs-12 col-sm-8 col-md-9 home-wrap">
-  {{ content }}
+<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-7 col-md-offset-1 article-container">
+  <span class="category">{{ page.categories }} </span>
+  <h2>{{ page.title }}</h2>
+  <p class="meta">{{ page.date | date_to_string }} | {{ page.description }}</p>
+  <hr>
+  <div style="padding: 0 10px">
+    <div class="col-xs-12  post-title-image">
+      <img src='{{ page.thumbnail }}' class='img-responsive'>
+    </div>
+    {{ content }}
+  </div>
+
 </div>
