@@ -1,5 +1,13 @@
 .row#large-header
-  h1 Logo
+  .col-sm-3.social-bar.pull-down
+    img(src='/assets/img/facebook.png')
+    img(src='/assets/img/twitter.png')
+    img(src='/assets/img/google.png')
+    img(src='/assets/img/pintrest.png')
+  .col-sm-6
+    img.logo(src='/assets/img/logo.png')
+  .col-sm-3.search-bar.pull-down
+      span(aria-hidden="true").glyphicon.glyphicon-search
 .row#small-header
   .row
     nav.navbar.navbar-default
@@ -16,14 +24,10 @@
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav
             li: a(href='/index.html') Home
-            li.dropdown: a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') Categories
-              span.caret
-              ul.dropdown-menu
-                li: a(href='#') Recipes
-                li: a(href='#') Advice
-                li: a(href='#') Training
-                li: a(href='#') Reviews
-            li: a(href='#') Archives
-            li: a(href='about.html') About
+            li: a(href='#') Advice
+            li: a(href='#') Recipes
+            li: a(href='#') Training
+            li: a(href='#') Other
+            li: a(href='#') About
             li: a(href='#') Contact
             li: a(href='#') Shop

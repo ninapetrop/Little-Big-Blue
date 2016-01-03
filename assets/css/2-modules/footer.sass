@@ -1,12 +1,32 @@
-footer
-  border-top: 1px solid grey
-  padding: 20px 0
-  .social-bar
-    img
-      width: 50px
-      margin: 5px 0 5px 0
-      display: block
-      float: right
-      clear: both
-  .bottom-about
-    border-left: solid 4px lightblue
+#footer-container
+  background: $primary-color
+  border-top: 10px solid $primary-color-dark
+  color: white
+  width: 100vw
+  padding-bottom: 50px
+  .row
+    max-width: 1080px
+    margin: auto
+    .col-sm-3
+      height: 200px
+    .right-bar
+      border-left: solid 2px $primary-color-light
+      height: 100%
+      margin-top: 5%
+      .social-bar
+        img
+          display: inline
+          width: 40px
+          height: 40px
+          margin: 5px
+      .subscribe
+        .subscribe-container
+          background: $primary-color-light
+          height: 80px
+          width: 300px
+          input
+            background: white
+            height: 100%
+            width: 100%
+          button
+            background: yellow

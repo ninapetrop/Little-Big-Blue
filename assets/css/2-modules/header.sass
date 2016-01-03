@@ -1,12 +1,26 @@
+// hide the large header & styles on mobile
 #large-header
   @media (max-width: 786px)
     display: none
+  text-align: center
+  height: 150px
+  position: relative
+  .logo
+    height: auto
+  .social-bar
+    img
+      display: inline
+      width: 40px
+      height: 40px
+      margin: 5px
+  .search-bar
 #small-header
+  font-family: $Pacifico
   padding: 0
-  margin: 0
+  //margin: 0
   height: 55px
   @media (min-width: 786px)
-    margin-bottom: 20px
+    margin-bottom: 45px
   .row
     padding: 0
     margin: 0
@@ -15,8 +29,8 @@
     nav
       border: none
       @media (min-width: 786px)
-        border-top: solid 1px #616161
-        border-bottom: solid 1px #616161
+        border-top: solid 1px $divider-color
+        margin-top: 25px
         border-radius: 0
       background: none
       @media (min-width: 786px)
@@ -28,16 +42,14 @@
           padding: 0
           text-align: center
           ul
-            width: 100%
-            font-size: 15px
-            @media (min-width: 1080px)
-              width: 70%
-              margin: 0 12.5%
-              font-size: 18px
+            width: 90%
+            margin: 0 5%
+            font:
+              size: 17px
+              weight: 300
             float: center
-            font-weight: 500
             li
               text-align: center
-              width: 16.66%
+              width: 12.5%
               a
-                color: black
+                color: $secondary-text

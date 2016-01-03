@@ -1,10 +1,15 @@
-footer.row
-  .col-sm-1.col-sm-offset-2.text-right.social-bar
-    img.img-responsive(src='/assets/img/twitter.png')
-    img.img-responsive(src='/assets/img/facebook.ico')
-    img.img-responsive(src='/assets/img/rss.png')
-  .col-sm-4.bottom-about
-    strong {{ site.title }}
-    p {{ site.email }}
-    hr
-    p {{ site.description }}
+.row
+  .col-sm-3
+    h1 {{ site.title }}
+    strong Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+  .col-sm-3.col-sm-offset-6.right-bar
+    .col-xs-12.social-bar
+      img(src='/assets/img/facebook.png')
+      img(src='/assets/img/twitter.png')
+      img(src='/assets/img/google.png')
+      img(src='/assets/img/pintrest.png')
+    .col-xs-12.subscribe
+      h3 Subscribe
+      .subscribe-container
+        input(placeholder='john@email.com')
+        button WORK
