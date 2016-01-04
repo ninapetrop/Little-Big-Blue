@@ -10,7 +10,7 @@ layout: default
   <img src='{{ page.thumbnail }}' class='img-responsive'>
   <p class="caption">{{ page.caption }}</p>
   <hr>
-  
+
   {{ content }}
 
   <!-- Author Block -->
@@ -33,14 +33,10 @@ layout: default
   </div>
 </div>
 
-<!-- Related Articles -->
+<!-- TODO: 1/4/2016 find a way to make this side bar work. this column needs to post related articles within the category of a given post -->
 <div class="col-sm-4 col-md-3 col-md-offset-1 sidebar">
   <h3>Related Articles</h3>
-<<<<<<< HEAD
-  {% for posts in page.categories limit:3 %}
-=======
   {% for post in site.categories.recipes limit:3 %}
->>>>>>> 21b9f7f56874f6001e291fb172eeec5ae6bfd04a
     <div class="clearfix col-xs-12 article-cards">
       <img src='{{ post.thumbnail }}' class="thumbnails">
       <span class="category">{{ post.categories }} </span>
