@@ -1,16 +1,38 @@
 @import "_vars.sass"
+
 //	Typography
+  // Global
 h1
   font-size: 36px
+
 h3
   font-size: 24px
+
+h1, h3
+  font-family: $Pacifico
+
 h5
   margin-bottom: 0
   margin-top: 15px
-h1, h3
-  font-family: $Pacifico
-// Selection colors (easy to forget)
 
+p
+  font-size: 16px
+
+  // Posts
+.post-title
+  font-size: 36px
+  color: $primary-color
+  margin-top: 5px
+.caption
+  color: $secondary-text
+  font-size: 14px
+  padding: 15px 0 5px 0
+.meta
+  text-transform: uppercase
+  color: $secondary-text
+  font-size: 14px
+
+// Selection colors (easy to forget)
 ::selection
   background: $selection-color
 
@@ -44,17 +66,13 @@ body
   -webkit-text-size-adjust: 100%
 
 .container
-  padding: 0
   @media (min-width: 786px)
     padding: 0 0 100px 0
+
 .no-padding
   padding: 0
 
-.logo
-  font-family: $Pacifico
-  text-align: center
-  font-weight: 300
-  color: $primary-color
+// Special Divider Styles
 .section-divider
   .style
     border-bottom: solid 2px $primary-color-light
