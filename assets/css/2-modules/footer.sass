@@ -10,7 +10,9 @@
     .col-sm-3
       height: 200px
     .right-bar
-      border-left: solid 2px $primary-color-light
+      padding: 0
+      @media (min-width: 786px)
+        border-left: solid 2px $primary-color-light
       height: 100%
       margin-top: 5%
       .social-bar

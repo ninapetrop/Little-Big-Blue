@@ -2,14 +2,11 @@
 layout: default
 title: Home
 ---
-<p>
-  llalala
-</p>
 <div class="col-xs-12 home-wrap">
   {% for post in site.posts limit:10 %}
-    <div class="clearfix col-xs-6 col-sm-3 col-md-2 article-cards recent-articles">
+    <div class="clearfix col-xs-12 col-sm-3 col-md-2 article-cards recent-articles">
       <img src='{{ post.thumbnail }}' class="thumbnails">
-      <span class="category">{{ post.categories }} </span>
+      <span class="meta">{{ post.categories }} </span>
       <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
     </div>
   {% endfor %}
@@ -28,26 +25,26 @@ title: Home
       <h3>Advice</h3>
     </div>
     {% for post in site.categories.advice limit:2 %}
-      <div class="col-xs-6 article-cards">
+      <div class="col-xs-12 article-cards">
         <img src='{{ post.thumbnail }}' class="thumbnails">
+        <span class="meta">{{ post.date | date_to_string }}</span>
         <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
-        <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
       </div>
     {% endfor %}
     <!-- Create the two "text-only" columns
       One will have <hr>, the other won't -->
     <div class="col-xs-12 col-sm-6 article-cards clearfix">
       <hr>
-    {% for post in site.categories.advice limit:2 %}
+    {% for post in site.categories.advice limit:2 offset:2 %}
         <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
-        <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+        <span class="meta">{{ post.date | date_to_string }}</span>
         <br>
     {% endfor %}
     </div>
-    <div class="ol-xs-12 col-sm-6 article-cards push-down">
-    {% for post in site.categories.advice limit:2 %}
+    <div class="col-xs-12 col-sm-6 article-cards push-down">
+    {% for post in site.categories.advice limit:2 offset:4 %}
+        <span class="meta">{{ post.date | date_to_string }}</span>
         <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
-        <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
         <br>
     {% endfor %}
     </div>
@@ -59,26 +56,26 @@ title: Home
       <h3>Recipes</h3>
     </div>
     {% for post in site.categories.recipes limit:2 %}
-      <div class="clearfix col-xs-6 article-cards">
+      <div class="clearfix col-xs-12 article-cards">
         <img src='{{ post.thumbnail }}' class="thumbnails">
+        <span class="meta">{{ post.date | date_to_string  }}</span>
         <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
-        <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
       </div>
     {% endfor %}
     <!-- Create the two "text-only" columns
       One will have <hr>, the other won't -->
-    <div class="clearfix ol-xs-12 col-sm-6 article-cards">
+    <div class="clearfix col-xs-12 col-sm-6 article-cards">
       <hr>
-    {% for post in site.categories.recipes limit:2 %}
+    {% for post in site.categories.recipes limit:2 offset: 2 %}
         <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
-        <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
-        <br>
+        <span class="meta">{{ post.date | date_to_string  }}</span>
+        <hr>
     {% endfor %}
     </div>
-    <div class="clearfix ol-xs-12 col-sm-6 article-cards push-down">
-    {% for post in site.categories.recipes limit:2 %}
+    <div class="clearfix col-xs-12 col-sm-6 article-cards push-down">
+    {% for post in site.categories.recipes limit:2 offset: 4 %}
+        <span class="meta">{{ post.date | date_to_string }}</span>
         <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
-        <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
         <br>
     {% endfor %}
     </div>

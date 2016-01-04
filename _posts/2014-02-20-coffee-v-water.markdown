@@ -2,7 +2,7 @@
 layout: post
 title:  "Coffee vs. Water: Is it Worth the Debate?"
 date:   2014-02-20 09:11:03
-categories: recipes
+categories: advice
 description: Phasellus hendrerit. Pellent aliquet nibh nec urna. In nis aliquet vel, dapibus id,mattis.
 thumbnail: /assets/img/thumbnails/coffee.jpg
 ---
