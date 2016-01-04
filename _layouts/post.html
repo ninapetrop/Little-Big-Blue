@@ -1,18 +1,45 @@
 ---
-layout: pages
+layout: default
 ---
 
+<div class="col-sm-8 col-md-7 col-md-offset-1 post-content">
 
-<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 article-container">
-  <span class="category">{{ page.categories }} </span>
-  <h2>{{ page.title }}</h2>
-  <p class="meta">{{ page.date | date_to_string }} | {{ page.description }}</p>
+  <!-- Post Header Section, for title and meta -->
+  <span class="meta">{{ page.categories }} | {{ page.date | date_to_string }}</span>
+  <h1 class="post-title">{{ page.title }}</h1>
+  <img src='{{ page.thumbnail }}' class='img-responsive'>
+  <p class="caption">{{ page.caption }}</p>
   <hr>
-  <div style="padding: 0 10px">
-    <div class="col-xs-12  post-title-image">
-      <img src='{{ page.thumbnail }}' class='img-responsive'>
-    </div>
-    {{ content }}
-  </div>
+  {{ content }}
 
+  <!-- Author Block -->
+  <div class="col-xs-12 author-block">
+    <h3>About the Author</h3>
+    <div class="col-xs-3">
+      <img src="{{ site.url }}/assets/img/johnDoe.png" class="img-responsive authorImg">
+    </div>
+    <div class="col-xs-9">
+      <strong>John Doe</strong>
+      <p class="text-muted">Contributing Writer since Oct. 2012</p>
+      <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.</p>
+      <div class="social-bar">
+        <img src="/assets/img/facebook.png" class="img-responsive"/>
+        <img src="/assets/img/twitter.png" class="img-responsive"/>
+        <img src="/assets/img/google.png" class="img-responsive"/>
+        <img src="/assets/img/pintrest.png" class="img-responsive"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Related Articles -->
+<div class="col-sm-4 col-md-3 col-md-offset-1 sidebar">
+  <h3>Related Articles</h3>
+  {% for post in site.categories.recipes limit:3 %}
+    <div class="clearfix col-xs-12 article-cards">
+      <img src='{{ post.thumbnail }}' class="thumbnails">
+      <span class="category">{{ post.categories }} </span>
+      <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+    </div>
+  {% endfor %}
 </div>
