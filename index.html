@@ -3,32 +3,35 @@ layout: default
 title: Home
 ---
 <div class="col-xs-12 home-wrap">
+
+  <div id="recent-articles-container">
   {% for post in site.posts limit:10 %}
     <div class="clearfix col-xs-12 col-sm-3 col-md-2 article-cards recent-articles">
       <img src='{{ post.thumbnail }}' class="thumbnails">
-      <span class="meta">{{ post.categories }} </span>
       <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+      <span class="meta">{{ post.categories }} </span>
     </div>
   {% endfor %}
+  </div>
 
-  <div class="col-xs-12 section-divider clearfix">
+  <!-- <div class="col-xs-12 section-divider clearfix">
     <div class="col-xs-12 col-sm-4 style"></div>
     <div class="col-xs-12 col-sm-4">
       <h1 class="special-font">Categories</h1>
     </div>
     <div class="col-xs-12 col-sm-4 style"></div>
-  </div>
-
+  </div> -->
+  <hr class="col-xs-12">
   <!-- Advice, multi-column section -->
-  <div class="col-xs-12 col-sm-6 half-section half-section-left">
+  <div class="col-xs-12 col-sm-6 half-section half-section-left clearfix">
     <div class="col-xs-12 category-bar">
       <h3>Advice</h3>
     </div>
     {% for post in site.categories.advice limit:2 %}
-      <div class="col-xs-12 article-cards">
+      <div class="col-xs-12 col-sm-6 article-cards">
         <img src='{{ post.thumbnail }}' class="thumbnails">
-        <span class="meta">{{ post.date | date_to_string }}</span>
         <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+        <span class="meta">{{ post.date | date_to_string }}</span>
       </div>
     {% endfor %}
     <!-- Create the two "text-only" columns
@@ -43,41 +46,42 @@ title: Home
     </div>
     <div class="col-xs-12 col-sm-6 article-cards push-down">
     {% for post in site.categories.advice limit:2 offset:4 %}
-        <span class="meta">{{ post.date | date_to_string }}</span>
         <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+        <span class="meta">{{ post.date | date_to_string }}</span>
         <br>
     {% endfor %}
     </div>
   </div>
 
   <!-- Recipes, multi-column section -->
-  <div class="col-xs-12 col-sm-6 half-section half-section-right">
+  <div class="col-xs-12 col-sm-6 half-section half-section-left">
     <div class="col-xs-12 category-bar">
       <h3>Recipes</h3>
     </div>
     {% for post in site.categories.recipes limit:2 %}
-      <div class="clearfix col-xs-12 article-cards">
+      <div class="col-xs-12 col-sm-6 article-cards">
         <img src='{{ post.thumbnail }}' class="thumbnails">
-        <span class="meta">{{ post.date | date_to_string  }}</span>
         <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+        <span class="meta">{{ post.date | date_to_string }}</span>
       </div>
     {% endfor %}
     <!-- Create the two "text-only" columns
       One will have <hr>, the other won't -->
-    <div class="clearfix col-xs-12 col-sm-6 article-cards">
+    <div class="col-xs-12 col-sm-6 article-cards clearfix">
       <hr>
-    {% for post in site.categories.recipes limit:2 offset: 2 %}
+    {% for post in site.categories.recipes limit:2 offset:2 %}
         <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
-        <span class="meta">{{ post.date | date_to_string  }}</span>
-        <hr>
+        <span class="meta">{{ post.date | date_to_string }}</span>
+        <br>
     {% endfor %}
     </div>
-    <div class="clearfix col-xs-12 col-sm-6 article-cards push-down">
-    {% for post in site.categories.recipes limit:2 offset: 4 %}
-        <span class="meta">{{ post.date | date_to_string }}</span>
+    <div class="col-xs-12 col-sm-6 article-cards push-down">
+    {% for post in site.categories.recipes limit:2 offset:4 %}
         <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+        <span class="meta">{{ post.date | date_to_string }}</span>
         <br>
     {% endfor %}
     </div>
   </div>
+
 </div>

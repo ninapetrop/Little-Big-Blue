@@ -1,55 +1,52 @@
-// hide the large header & styles on mobile
-#large-header
-  @media (max-width: 786px)
-    display: none
-  text-align: center
-  height: 150px
-  position: relative
-  .logo
-    height: auto
-  .social-bar
-    img
-      display: inline
-      width: 40px
-      height: 40px
-      margin: 5px
-  .search-bar
-#small-header
-  font-family: $Pacifico
-  padding: 0
-  //margin: 0
-  height: 55px
-  @media (min-width: 786px)
-    margin-bottom: 45px
-  .row
-    padding: 0
-    margin: 0
-    height: 100%
+.navRow
+  padding: 10px 0
+  margin: 0
+  width: 100%
+  height: 100%
+  margin-bottom: 100px
 
-    nav
-      border: none
-      @media (min-width: 786px)
-        border-top: solid 1px $divider-color
-        margin-top: 25px
-        border-radius: 0
-      background: none
-      @media (min-width: 786px)
-        .navbar-header
-          display: none
-        .collapse
-          width: 100%
-          margin: 0
+  nav
+    border: none
+    border-top: solid 5px $primary-color-dark
+    box-shadow: 0 4px 10px -2px $divider-color
+    background: none
+    margin-bottom: 50px
+
+    .container-fluid
+      background: $primary-color
+      opacity: 0.9
+      .collapse
+        @media (min-width: 786px)
+          float: right
+        .dropdown.open .dropdown-toggle
+          background: $primary-color
+        .dropdown-menu
+          width: 100vw
+          background: $primary-color
+          border: none
           padding: 0
-          text-align: center
-          ul
-            width: 90%
-            margin: 0 5%
-            font:
-              size: 17px
-              weight: 300
-            float: center
-            li
-              text-align: center
-              width: 12.5%
-              a
-                color: $secondary-text
+          margin: 0
+          li
+            padding: 5px 0 5px 5px
+            height: auto
+            margin: 0
+          a
+            color: white
+            margin: 0
+            &:hover
+              background: $primary-color-light
+          a:first-child
+            padding-top: 0
+            margin-top: 0
+      .navbar-header
+        button
+          border: none
+          background: none
+          span
+            background: white
+      .navbar-header, .collapse
+        a
+          color: white
+          font-weight: bold
+        &:focus
+          background: green

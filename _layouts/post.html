@@ -2,13 +2,14 @@
 layout: default
 ---
 
-<div class="col-sm-8 col-md-7 col-md-offset-1 post-content">
+<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 post-content">
 
   <!-- Post Header Section, for title and meta -->
   <span class="meta">{{ page.categories }} | {{ page.date | date_to_string }}</span>
   <h1 class="post-title">{{ page.title }}</h1>
+  <hr>
   <img src='{{ page.thumbnail }}' class='img-responsive'>
-  <p class="caption">{{ page.caption }}</p>
+  {% if page.caption %}<p class="caption">{{ page.caption }}</p>{% endif %}
   <hr>
 
   {{ content }}
@@ -20,27 +21,16 @@ layout: default
       <img src="{{ site.url }}/assets/img/johnDoe.png" class="img-responsive authorImg">
     </div>
     <div class="col-xs-9">
-      <strong>John Doe</strong>
-      <p class="text-muted">Contributing Writer since Oct. 2012</p>
-      <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.</p>
+      <strong>{{ page.author }}</strong>
+      <p class="text-muted">{{ page.authorTitle }}</p>
+      <p>{{ page.authorBio }}</p>
       <div class="social-bar">
-        <img src="/assets/img/facebook.png" class="img-responsive"/>
-        <img src="/assets/img/twitter.png" class="img-responsive"/>
-        <img src="/assets/img/google.png" class="img-responsive"/>
-        <img src="/assets/img/pintrest.png" class="img-responsive"/>
+        <a href="{{ page.authorFacebook }}"><img src="/assets/img/facebook.png" class="img-responsive"/></a>
+        <a href="{{ page.authorTwitter }}">
+          <img src="/assets/img/twitter.png" class="img-responsive" href="{{ page.authorTwitter }}"/></a>
+        <a href="{{ page.authorGoogle }}">
+          <img src="/assets/img/google.png" class="img-responsive" href="{{ page.authorGoogle }}"/></a>
       </div>
     </div>
   </div>
-</div>
-
-<!-- TODO: 1/4/2016 find a way to make this side bar work. this column needs to post related articles within the category of a given post -->
-<div class="col-sm-4 col-md-3 col-md-offset-1 sidebar">
-  <h3>Related Articles</h3>
-  {% for post in site.categories.recipes limit:3 %}
-    <div class="clearfix col-xs-12 article-cards">
-      <img src='{{ post.thumbnail }}' class="thumbnails">
-      <span class="category">{{ post.categories }} </span>
-      <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
-    </div>
-  {% endfor %}
 </div>

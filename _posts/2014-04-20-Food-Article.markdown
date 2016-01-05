@@ -1,10 +1,20 @@
 ---
 layout: post
-title:  "Another Artilce About Food"
+title:  "Another Article About Food"
 date:   2014-04-20 09:11:03
 categories: recipes
 description: Phasellus hendrerit. Pellent aliquet nibh nec urna. In nis aliquet vel, dapibus id,mattis.
 thumbnail: /assets/img/thumbnails/food.jpg
+caption: If you have a caption for an image, you should write it here
+
+# Information for the author block
+author: John Doe
+authorTitle: Product Reviews and Recipes
+authorBio: From product reviews to five-star restaurant critiques, John Doe's curiosity lends itself well to nearly every topic.
+# Link up the author's social media
+authorFacebook:
+authorTwitter:
+authorGoogle:
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
