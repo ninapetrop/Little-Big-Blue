@@ -1,4 +1,6 @@
 .home-wrap
+  .meta
+    margin-bottom: 10px
   #recent-articles-container
     padding: 0
     margin: auto
@@ -31,9 +33,7 @@
         margin-left: 20px
   .half-section-left
     @media (min-width: 786px)
-      padding-right: 3px
-    @media (min-width: 786px)
-      padding-left: 3px
+      padding: 3px
   .article-cards
     transition: 350ms ease-in-out
     &:hover
@@ -48,8 +48,6 @@
       margin-top: 5px
     .meta
       margin-top: 5px
-      margin-bottom: 0
-    .meta
       text-transform: uppercase
       color: $secondary-text
       font-size: 12px
@@ -57,6 +55,8 @@
         text-decoration: underline
     .thumbnails
       width: 100%
+      margin-top: 20px
+      border-radius: 4px
   .border-top
     border-top: solid 2px $primary-color-light
   .push-down
