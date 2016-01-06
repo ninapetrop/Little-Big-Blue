@@ -1,21 +1,20 @@
 # Default, Defaults
-name: Test
 markdown: redcarpet
 highlighter: pygments # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 
 # Jekyll Defaults
-title: Jekyll Hyde
+title: Little Big Blue
 email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: A small and simple site I made to test out Jekyll. Watch out! I'm going to make a material design theme next!
 baseurl: "" # the subpath of your site, e.g. /blog
-# Developement URL ONLY
-url: "http://localhost:3000" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
 
-# Build settings
-#markdown: kramdown
+# Where can people find your site?
+url: "http://localhost:3000"
+# When developing, set this ^ equal to whatever localhost you're using
+
+# Socail Media links
+# Use these to link users to your organization's social media sites
+twitter:
+facebook:
+google:
