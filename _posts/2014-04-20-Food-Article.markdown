@@ -17,20 +17,20 @@ authorTwitter:
 authorGoogle:
 ---
 
-You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
-To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
+A Jekyll theme for blogging. With the ability to sort posts by category and list various authors in an authors block, this theme is perfect for collaborative projects.
 
-Jekyll also offers powerful support for code snippets:
+# How to use it
+1. Star & fork the [repo][repo]
+2. Rename the repo and clone the master branch to your local directory
+3. Customize the `_config.yml` file to represent you
+4. Download Gulp to get the most out of this theme (compiling Jade/Sass, browser refresh etc.)
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+**When using a local server** change the url in the `_config.yml` to your server address. Make sure to change it back to your domain before you deploy.
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
+* * *
+##Author blocks
+Author blocks are populated based on each post in the `_posts` folder. The author **name**, **title**, **bio**, and **social media** links are all defined in the YAML at the top of ever post page.
 
-[jekyll-gh]: https://github.com/mojombo/jekyll
-[jekyll]:    http://jekyllrb.com
+If you're only going to feature posts from one author, or default to that author primarily, you can define these values in the `_config.yml` file, just like you do for url, and sitename. This will require you change the tags in the `_layouts/posts.html` file.
+
+[repo]: http://github.com/ninapetrop/Jekyll-Testing-Site
