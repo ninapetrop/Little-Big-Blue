@@ -1,71 +1,41 @@
 @import "_vars.sass"
+
 //	Typography
+  // Global
+h1
+  font-size: 36px
 
-.gigantic, .huge, .large, .bigger, .big,
+h3
+  font-size: 24px
+
 h1, h2, h3, h4, h5, h6
-  color: $accent-color
-  font-weight: bold
+  font-family: $Condensed
+  font-weight: 700
 
-.gigantic
-  font-size: 110px
-  line-height: 1.09
-  letter-spacing: -2px
-
-.huge, h1
-  font-size: 68px
-  line-height: 1.05
-  letter-spacing: -1px
-
-.large, h2
-  font-size: 42px
-  line-height: 1.14
-
-.bigger, h3
-  font-size: 26px
-  line-height: 1.38
-
-.big, h4
-  font-size: 22px
-  line-height: 1.38
-
-.small, small
-  font-size: 10px
-  line-height: 1.2
-
-
+h5
+  margin-bottom: 0
+  margin-top: 15px
 
 p
-  margin: 0 0 20px 0
-
-em
-  font-style: italic
-
-strong
-  font-weight: bold
-
-hr
-  border: solid #ddd
-  border-width: 1px 0 0
-  clear: both
-  margin: 10px 0 30px
-  height: 0
-
-
-
-// Links
-
-a
-  color: $link-color
-  text-decoration: none
-  outline: 0
-
-a:hover, a:focus
-  color: lighten($link-color, 20%)
-
-
+  font-size: 16px
+  color: $text
+.category-title-page
+  text-align: center
+  // Posts
+.post-title
+  font-size: 36px
+  color: $text
+  margin-top: 5px
+.caption
+  color: $secondary-text
+  font-size: 14px
+  padding: 15px 0 5px 0
+.meta
+  text-transform: uppercase
+  color: $secondary-text
+  font-size: 14px
 
 // Selection colors (easy to forget)
-
 ::selection
   background: $selection-color
 
@@ -99,6 +69,24 @@ body
   -webkit-text-size-adjust: 100%
 
 .container
-  padding: 0
+  @media (max-width: 786px)
+    padding: 0 5px 5px 5px
+  @media (min-width: 786px)
+    padding: 0 0 100px 0
+  min-height: 70vh
+
 .no-padding
   padding: 0
+
+// Special Divider Styles
+.section-divider
+  .style
+    border-bottom: solid 2px $primary-color-light
+    height: 100%
+    height: 45px
+    @media (max-width: 786px)
+      display: none
+  h1
+    font-family: $Condensed
+    text-align: center
+    color: $primary-color-dark

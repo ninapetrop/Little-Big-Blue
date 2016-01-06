@@ -1,34 +1,64 @@
 .home-wrap
-  .category-bar
-    border-left: solid 4px #4DB6AC
-    padding-left: 6px
-    span
-      color: $grey-color
-      font-size: 14px
-      font-weight: 300
-    .glyphicon
-  .article-cards
-    display: block
-    margin: 20px 0
-    clear: right
+  .meta
+    margin-bottom: 10px
+  #recent-articles-container
+    padding: 0
+    margin: auto
+    .recent-articles
+      h5
+        margin-bottom: 5px
+        @media (max-width: 786px)
+          margin-bottom: 25px
+      .category
+        margin-top: 5px
+        margin-bottom: 0
+    // Make small columns pretty
+    @media (min-width: 786px) and (max-width: 992px)
+      .col-sm-3:nth-child(4n+1)
+        clear: both
+    // Make medium columns pretty
+    @media (min-width: 992px)
+      .col-md-2
+        width: 18%
+        padding: 1%
+        margin: 0
+        display: inline-block
+      .col-md-2:nth-child(5n+1)
+        clear: both
+    @media (min-width: 992px) and (max-width: 1200px)
+      .col-md-2:nth-child(1n)
+        margin-left: 10px
+    @media (min-width: 1200px)
+      .col-md-2:nth-child(1n)
+        margin-left: 20px
+  .half-section-left
     @media (min-width: 786px)
-      height: 320px
-    padding: 7px
+      padding: 3px
+  .article-cards
     transition: 350ms ease-in-out
     &:hover
       border-radius: 2px
       cursor: pointer
-      background: white
-      border-top: solid 5px #FAFAFA
+      transform: scale(1.012)
       .thumbnails
         transform: scale(1.012)
-    .category
+        opacity: 1
+        filter: alpha(opacity=100)
+    h5
+      margin-top: 5px
+    .meta
+      margin-top: 5px
       text-transform: uppercase
-      color: $grey-color
+      color: $secondary-text
       font-size: 12px
       &:hover
         text-decoration: underline
-    .description
-      color: $grey-color
     .thumbnails
       width: 100%
+      margin-top: 20px
+      border-radius: 4px
+  .border-top
+    border-top: solid 2px $primary-color-light
+  .push-down
+    @media (min-width: 786px)
+      padding-top: 40px
