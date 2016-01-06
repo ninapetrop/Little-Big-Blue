@@ -2,8 +2,14 @@
   .col-xs-12.col-sm-4.col-sm-offset-2.footer-content
     h1 {{ site.title }}
     .social-bar.no-padding.col-xs-12
-      img.img-responsive(src='/assets/img/facebook.png')
-      img.img-responsive(src='/assets/img/twitter.png')
-      img.img-responsive(src='/assets/img/google.png')
+      a(href='{{ site.facebook }}')
+        img.img-responsive(src='/assets/img/facebook.png')
+      a(href='{{ site.twitter }}')
+        img.img-responsive(src='/assets/img/twitter.png')
+      a(href='{{ site.google }}')
+        img.img-responsive(src='/assets/img/google.png')
       br
     strong Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    br
+    p.text-right(style='margin-top: 50px; color:white') © 2016 powered by Jekyll, designed by 
+      a(href='http://github.com/ninapetrop', style='color:white;font-weight:500') Miss
