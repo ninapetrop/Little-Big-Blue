@@ -3,7 +3,7 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
-var jade          = require('gulp-jade');
+var jade        = require('gulp-jade');
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -67,7 +67,9 @@ gulp.task('jade', function(){
  */
 gulp.task('watch', function () {
     gulp.watch('assets/css/**', ['sass']);
+    gulp.watch('assets/js/**', ['jekyll-rebuild']);
     gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+    gulp.watch(['assets/js/**'], ['jekyll-rebuild']);
     // added to watch jade files
     gulp.watch('_jadefiles/*.jade', ['jade']);
 });
