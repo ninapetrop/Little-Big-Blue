@@ -23,9 +23,7 @@ A Jekyll theme for blogging. With the ability to sort posts by category and list
 1. Star & fork the [repo][repo]
 2. Rename the repo and clone the master branch to your local directory
 3. Customize the `_config.yml` file to represent you
-4. Download Gulp to get the most out of this theme (compiling Jade/Sass, browser refresh etc.)
-
-**When using a local server** change the url in the `_config.yml` to your server address. Make sure to change it back to your domain before you deploy.
+4. Download [Gulp][Gulp]
 
 * * *
 ##Author blocks
@@ -33,4 +31,8 @@ Author blocks are populated based on each post in the `_posts` folder. The autho
 
 If you're only going to feature posts from one author, or default to that author primarily, you can define these values in the `_config.yml` file, just like you do for url, and sitename. This will require you change the tags in the `_layouts/posts.html` file.
 
+##Category Pages
+To add a page that lists all posts in a given category, copy one of the existing pages in the `categories` folder and change the `for post in site.categories.advice` loop to the category you want.
+
 [repo]: http://github.com/ninapetrop/Jekyll-Testing-Site
+[Gulp]: https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md
