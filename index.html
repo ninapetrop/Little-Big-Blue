@@ -3,14 +3,24 @@ layout: default
 title: Home
 ---
 <div class="col-xs-12 home-wrap">
-  <div id="recent-articles-container">
-  {% for post in site.posts limit:10 %}
-    <div class="clearfix col-xs-12 col-sm-3 col-md-2 article-cards recent-articles">
+  <h2>Recent Articles</h2>
+  <div class="col-md-9" id="recent-articles-container">
+  {% for post in site.posts limit:6 %}
+    <div class="clearfix col-xs-6 col-sm-4 article-cards recent-articles">
       <a href="{{ post.url }}"><img src='{{ post.thumbnail }}' class="thumbnails"></a>
-      <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+      <a class='post-link' href="{{ post.url }}">{{ post.title }}</a>
+      <br>
       <span class="meta">{{ post.categories }} </span>
     </div>
   {% endfor %}
+  </div>
+  <div class="col-md-3">
+    {% for post in site.posts limit:4 offset: 6%}
+      <hr>
+      <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+      <br>
+      <a class="meta" href='{{ site.url }}/categories/{{ post.categories }}.html'>{{ post.categories }} </a>
+    {% endfor %}
   </div>
   <hr class="col-xs-12">
 
@@ -23,8 +33,9 @@ title: Home
     {% for post in site.categories.advice limit:2 %}
       <div class="col-xs-12 col-sm-6 article-cards">
         <a href="{{ post.url }}"><img src='{{ post.thumbnail }}' class="thumbnails"></a>
-        <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
-        <span class="meta">{{ post.date | date_to_string }}</span>
+        <a class='post-link' href="{{ post.url }}">{{ post.title }}</a>
+        <br>
+        <span class="meta date">{{ post.date | date_to_string }}</span>
       </div>
     {% endfor %}
     <!-- These next two columns will only show the title and date for each post. The value is currently set to list 2 stories in each column. -->
@@ -32,16 +43,18 @@ title: Home
       <hr>
     <!-- If you want to add more posts to each column change the 'limit' value, and adjust the 'offset' value accordingly -->
     {% for post in site.categories.advice limit:2 offset:2 %}
-        <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
-        <span class="meta">{{ post.date | date_to_string }}</span>
+        <a class='post-link' href="{{ post.url }}">{{ post.title }}</a>
+        <br>
+        <span class="meta date">{{ post.date | date_to_string }}</span>
         <br>
     {% endfor %}
     </div>
     <!-- Second text-only column, this one has no <hr> on top of it, for silly styling purposes. The offset value makes sure that we're not repeating posts listed in each category -->
     <div class="col-xs-12 col-sm-6 article-cards push-down">
     {% for post in site.categories.advice limit:2 offset:4 %}
-        <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
-        <span class="meta">{{ post.date | date_to_string }}</span>
+        <a class='post-link' href="{{ post.url }}">{{ post.title }}</a>
+        <br>
+        <span class="meta date">{{ post.date | date_to_string }}</span>
         <br>
     {% endfor %}
     </div>
@@ -56,8 +69,9 @@ title: Home
     {% for post in site.categories.recipes limit:2 %}
       <div class="col-xs-12 col-sm-6 article-cards">
         <a href="{{ post.url }}"><img src='{{ post.thumbnail }}' class="thumbnails"></a>
-        <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
-        <span class="meta">{{ post.date | date_to_string }}</span>
+        <a class='post-link' href="{{ post.url }}">{{ post.title }}</a>
+        <br>
+        <span class="meta date">{{ post.date | date_to_string }}</span>
       </div>
     {% endfor %}
 
@@ -65,8 +79,9 @@ title: Home
     <div class="col-xs-12 col-sm-6 article-cards clearfix">
       <hr>
     {% for post in site.categories.recipes limit:2 offset:2 %}
-        <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
-        <span class="meta">{{ post.date | date_to_string }}</span>
+        <a class='post-link' href="{{ post.url }}">{{ post.title }}</a>
+        <br>
+        <span class="meta date">{{ post.date | date_to_string }}</span>
         <br>
     {% endfor %}
     </div>
@@ -74,8 +89,9 @@ title: Home
       <!-- Text-only column right -->
     <div class="col-xs-12 col-sm-6 article-cards push-down">
     {% for post in site.categories.recipes limit:2 offset:4 %}
-        <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
-        <span class="meta">{{ post.date | date_to_string }}</span>
+        <a class='post-link' href="{{ post.url }}">{{ post.title }}</a>
+        <br>
+        <span class="meta date">{{ post.date | date_to_string }}</span>
         <br>
     {% endfor %}
     </div>
