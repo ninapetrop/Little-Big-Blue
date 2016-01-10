@@ -1,0 +1,17 @@
+// Tools
+@import "0-tools/normalize";
+@import "0-tools/fonts";
+
+// Base
+@import "1-base/base.sass";
+
+// Modules
+@import "2-modules/header.sass";
+@import "2-modules/sidebar.sass";
+@import "2-modules/footer.sass";
+@import "2-modules/authorBlock.sass";
+
+//Layouts
+@import "4-layouts/home.sass";
+@import "4-layouts/post.sass";
+@import "4-layouts/page.sass";

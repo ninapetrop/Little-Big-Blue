@@ -1,0 +1,32 @@
+.sidebar
+  @media (min-width: 786px)
+    height: auto
+    margin-top: 15%
+    border-left: solid 2px $primary-color-light
+  .article-cards
+    @media (min-width: 786px)
+      margin: 40px auto
+    transition: 350ms ease-in-out
+    &:hover
+      border-radius: 2px
+      cursor: pointer
+      transform: scale(1.012)
+      .thumbnails
+        transform: scale(1.012)
+        opacity: 1
+        filter: alpha(opacity=100)
+    h5
+      margin-top: 5px
+    .date
+      margin-top: 5px
+      margin-bottom: 0
+    .category, .date
+      text-transform: uppercase
+      color: $secondary-text
+      font-size: 12px
+      &:hover
+        text-decoration: underline
+    .description
+      color: $secondary-text
+    .thumbnails
+      width: 100%

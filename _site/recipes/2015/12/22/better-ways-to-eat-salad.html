@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Never Be Bored By Salad Again</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://localhost:3000/assets/css/main.css">
+  </head>
+  <body>
+    <div class="container-fluid" id="navContainer">
+      <div class="row navRow"><nav class="navbar navbar-default navbar-fixed-top"><div class="container-fluid"><!-- Brand and toggle get grouped for better mobile display--><div class="navbar-header"><button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="" class="navbar-brand">Little Big Blue</a></div><!-- Collect the nav links, forms, and other content for toggling--><div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse"><ul class="nav navbar-nav"><li><a href="/index.html">Home</a></li><li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">Categories<span class="caret"><ul class="dropdown-menu"><!-- This is where you would list your categories--><li><a href="/categories/recipes.html">Recipes</a></li><li><a href="/categories/training.html">Training</a></li><li><a href="/categories/reviews.html">Reviews</a></li></ul></span></a></li><li><a href="/about.html">About</a></li></ul></div></div></nav></div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 post-content">
+
+  <!-- Post Header Section, for title and meta -->
+  <span class="meta">recipes | 22 Dec 2015</span>
+  <h1 class="post-title">Never Be Bored By Salad Again</h1>
+  <hr>
+  <img src='/assets/img/thumbnails/salad.jpg' class='img-responsive'>
+  <p class="caption">If you have a caption for an image, you should write it here</p>
+  <hr>
+
+  <p>A Jekyll theme for blogging. With the ability to sort posts by category and list various authors in an authors block, this theme is perfect for collaborative projects.</p>
+
+<h1>How to use it</h1>
+
+<ol>
+<li>Star &amp; fork the <a href="http://github.com/ninapetrop/Jekyll-Testing-Site">repo</a></li>
+<li>Rename the repo and clone the master branch to your local directory</li>
+<li>Customize the <code>_config.yml</code> file to represent you</li>
+<li>Download <a href="https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md">Gulp</a></li>
+</ol>
+
+<hr>
+
+<h2>Author blocks</h2>
+
+<p>Author blocks are populated based on each post in the <code>_posts</code> folder. The author <strong>name</strong>, <strong>title</strong>, <strong>bio</strong>, and <strong>social media</strong> links are all defined in the YAML at the top of ever post page.</p>
+
+<p>If you&#39;re only going to feature posts from one author, or default to that author primarily, you can define these values in the <code>_config.yml</code> file, just like you do for url, and sitename. This will require you change the tags in the <code>_layouts/posts.html</code> file.</p>
+
+<h2>Category Pages</h2>
+
+<p>To add a page that lists all posts in a given category, copy one of the existing pages in the <code>categories</code> folder and change the <code>for post in site.categories.advice</code> loop to the category you want.</p>
+
+
+  <!-- Author Block -->
+  <div class="col-xs-12 author-block">
+    <h3>About the Author</h3>
+    <div class="col-xs-12 col-sm-3">
+      <img src="http://localhost:3000/assets/img/johnDoe.png" class="img-responsive authorImg">
+    </div>
+    <div class="col-xs-12 col-sm-9">
+      <strong>John Doe</strong>
+      <p class="text-muted">Product Reviews and Recipes</p>
+      <p>From product reviews to five-star restaurant critiques, John Doe's curiosity lends itself well to nearly every topic.</p>
+      <div class="social-bar">
+        <a href=""><img src="/assets/img/facebook.png" class="img-responsive"/></a>
+        <a href="">
+          <img src="/assets/img/twitter.png" class="img-responsive" href=""/></a>
+        <a href="">
+          <img src="/assets/img/google.png" class="img-responsive" href=""/></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <div class="container-fluid" id="footer-container">
+      <div class="row"><div class="col-xs-12 col-sm-4 col-sm-offset-2 footer-content"><h1>Little Big Blue</h1><div class="social-bar no-padding col-xs-12"><a href=""><img src="/assets/img/facebook.png" class="img-responsive"/></a><a href=""><img src="/assets/img/twitter.png" class="img-responsive"/></a><a href=""><img src="/assets/img/google.png" class="img-responsive"/></a><br/></div><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </strong><br/><p style="margin-top: 50px; color:white">© 2016 powered by Jekyll, designed by <a href="http://github.com/ninapetrop" style="color:white;font-weight:500">Miss</a></p></div></div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="http://localhost:3000/assets/js/function.js"></script>
+  </body>
+</html>
